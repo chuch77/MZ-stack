@@ -197,16 +197,16 @@ const Pricing = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">
-            {t('pricing.custom')}
+        <div className="text-center mt-14 bg-white rounded-2xl border border-gray-100 shadow-sm p-8 sm:p-10 max-w-2xl mx-auto">
+          <h3 className="text-xl sm:text-2xl font-bold mb-3">¿Necesitas una solución personalizada?</h3>
+          <p className="text-gray-600 mb-6 text-sm sm:text-base max-w-lg mx-auto">
+            Cada negocio es diferente. Solicita una cotización y recibirás una propuesta adaptada a tus necesidades específicas.
           </p>
-          <Button 
+          <Button
             onClick={scrollToContact}
-            variant="outline"
-            className="border-gray-300 hover:border-gray-400"
+            className="bg-brand hover:bg-brand-dark text-white px-8 py-3 rounded-xl shadow-md shadow-brand/20 text-sm font-medium"
           >
-            {t('pricing.quote')}
+            Solicitar Cotización
           </Button>
         </div>
       </div>
