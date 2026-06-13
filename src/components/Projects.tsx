@@ -12,10 +12,10 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: t('project.fashion.title'),
-      brand: t('project.fashion.brand'),
-      description: t('project.fashion.desc'),
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: 'Clínica Roa New Life',
+      brand: 'Roa New Life',
+      description: 'Plataforma web moderna para la gestión de citas, información de tratamientos y conexión con pacientes. Diseño 100% responsive con tecnología moderna y segura.',
+      tags: ["React", "TailwindCSS", "Redux Toolkit", "Spring Boot"],
       imageUrl: "/roa-new-life.png",
       link: "/links",
       accent: "from-blue-500 to-cyan-500"
