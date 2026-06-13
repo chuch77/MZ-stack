@@ -12,9 +12,9 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Clínica Roa New Life',
+      title: 'Clínica Quiropráctica Roa New Life',
       brand: 'Roa New Life',
-      description: 'Plataforma web moderna para la gestión de citas, información de tratamientos y conexión con pacientes. Diseño 100% responsive con tecnología moderna y segura.',
+      description: 'Plataforma web para quiropráctico en Polanco. Agenda de citas en línea, información de tratamientos, gestión de pacientes y diseño 100% responsive.',
       tags: ["React", "TailwindCSS", "Redux Toolkit", "Spring Boot"],
       imageUrl: "/roa-new-life.png",
       link: "/links",
