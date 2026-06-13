@@ -16,7 +16,7 @@ const Projects = () => {
       brand: t('project.fashion.brand'),
       description: t('project.fashion.desc'),
       tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      imageUrl: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+      imageUrl: "/roa-new-life.png",
       link: "/links",
       accent: "from-blue-500 to-cyan-500"
     },
