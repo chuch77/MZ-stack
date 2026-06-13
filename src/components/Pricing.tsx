@@ -17,20 +17,24 @@ const Pricing = () => {
       descriptionEn: "Perfect for small projects (10 hours minimum)",
       icon: <Star className="w-6 h-6" />,
       features: [
-        "Landing Page Responsiva",
-        "Hasta 5 secciones",
         "Formulario de contacto",
-        "SEO básico",
-        "1 revisión incluida",
-        "Entrega en 5-7 días"
+        "Optimización SEO básica",
+        "Integración con redes sociales",
+        "Despliegue en producción",
+        "1 ronda de revisiones",
+        "Entrega en 5-7 días",
+        "Tecnologías: React, Next.js, Tailwind CSS",
+        "Perfecto para: Restaurantes, gimnasios, consultorios, negocios locales y marcas personales."
       ],
       featuresEn: [
-        "Responsive Landing Page",
-        "Up to 5 sections",
         "Contact form",
-        "Basic SEO",
-        "1 revision included",
-        "5-7 days delivery"
+        "Basic SEO optimization",
+        "Social media integration",
+        "Production deployment",
+        "1 revision round",
+        "5-7 days delivery",
+        "Technologies: React, Next.js, Tailwind CSS",
+        "Perfect for: Restaurants, gyms, clinics, local businesses and personal brands."
       ],
       popular: false
     },
