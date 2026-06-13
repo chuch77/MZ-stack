@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ArrowRight, Sparkles, Zap, Rocket, Shield } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const AnimatedCounter = ({ end, suffix = "", duration = 2000 }: { end: number; suffix?: string; duration?: number }) => {
@@ -41,13 +41,6 @@ const WhyWrlds = () => {
     { value: 1, suffix: "+", label: t('about.months'), desc: t('about.months.desc'), gradient: "from-blue-500 to-cyan-500" },
     { value: 8, suffix: "+", label: t('about.projects'), desc: t('about.projects.desc'), gradient: "from-cyan-500 to-blue-600" },
     { value: 15, suffix: "+", label: t('about.technologies'), desc: t('about.technologies.desc'), gradient: "from-blue-600 to-sky-500" },
-  ];
-
-  const strengths = [
-    { icon: <Sparkles className="w-5 h-5" />, title: t('about.modern.title'), desc: t('about.modern.desc') },
-    { icon: <Zap className="w-5 h-5" />, title: t('about.learning.title'), desc: t('about.learning.desc') },
-    { icon: <Rocket className="w-5 h-5" />, title: t('about.complete.title'), desc: t('about.complete.desc') },
-    { icon: <Shield className="w-5 h-5" />, title: t('about.commitment.title'), desc: t('about.commitment.desc') },
   ];
 
   return (
@@ -96,39 +89,6 @@ const WhyWrlds = () => {
               <div className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r ${stat.gradient} group-hover:w-1/2 transition-all duration-500 rounded-full`} />
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* Strengths */}
-        <motion.div
-          className="mb-12"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={containerVariants}
-        >
-          <motion.div variants={itemVariants} className="text-center mb-10">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-              {t('about.contribute.subtitle')}
-            </h3>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {strengths.map((item, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="group flex items-start gap-4 p-6 rounded-2xl border border-gray-100 hover:border-brand/20 bg-white hover:bg-brand-light/30 transition-all duration-300"
-              >
-                <div className="w-10 h-10 rounded-xl bg-brand/10 text-brand flex items-center justify-center flex-shrink-0 group-hover:bg-brand group-hover:text-white transition-all duration-300">
-                  {item.icon}
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-1">{item.title}</h4>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </motion.div>
 
         <motion.div
