@@ -29,7 +29,6 @@ const Index = () => {
       <Hero />
       <Projects />
       <WhyWrlds />
-      <Features />
       <Pricing />
     </PageLayout>
   );
