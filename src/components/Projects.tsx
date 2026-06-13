@@ -32,11 +32,11 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: t('project.bookstore.title'),
-      brand: t('project.bookstore.brand'),
-      description: t('project.bookstore.desc'),
-      tags: ["TypeScript", "Next.js", "PostgreSQL", "Cloudinary"],
-      imageUrl: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop",
+      title: 'CampZone E-commerce',
+      brand: 'CampZone',
+      description: 'Equipa tu aventura con lo mejor del mercado. Tienda online especializada en camping, senderismo y aventura. Catálogo completo, pagos seguros y envíos a todo el país.',
+      tags: ["React", "TailwindCSS", "Redux Toolkit", "Spring Boot"],
+      imageUrl: "/campzone.png",
       link: "/links",
       accent: "from-blue-600 to-sky-500"
     },
