@@ -42,11 +42,11 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: t('project.crypto.title'),
-      brand: t('project.crypto.brand'),
-      description: t('project.crypto.desc'),
-      tags: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
-      imageUrl: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop",
+      title: 'FitFuel - Comida Saludable',
+      brand: 'FitFuel',
+      description: 'Come bien, vive mejor. Comida fit preparada por chefs con ingredientes 100% naturales, planes personalizados y entrega a domicilio. Tu salud, nuestra pasión.',
+      tags: ["React", "TailwindCSS", "Redux Toolkit", "Spring Boot"],
+      imageUrl: "/fitfuel.png",
       link: "/links",
       accent: "from-sky-500 to-blue-500"
     },
