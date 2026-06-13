@@ -27,9 +27,9 @@ const Index = () => {
         keywords={['desarrollador full stack', 'react', 'nodejs', 'ecommerce', 'javascript', 'typescript', 'portfolio', 'programador junior']}
       />
       <Hero />
-      <Features />
-      <WhyWrlds />
       <Projects />
+      <WhyWrlds />
+      <Features />
       <Pricing />
     </PageLayout>
   );
