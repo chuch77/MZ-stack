@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage, Language } from '@/contexts/LanguageContext';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
@@ -11,6 +11,8 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const languages = [
     { code: 'es' as Language, name: 'Español', flag: '🇪🇸' },
@@ -25,15 +27,21 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const navLinks = [
-    { label: t('nav.home'), to: '/' },
-    { label: t('nav.about'), to: '/about' },
-    { label: t('nav.services'), to: '/services' },
-    { label: 'Links', to: '/links' },
+    { label: 'Portafolio', sectionId: 'projects' },
+    { label: 'Mi Metodología', sectionId: 'why-wrlds' },
+    { label: 'Planes y Precios', sectionId: 'pricing' },
   ];
 
   return (
@@ -50,21 +58,21 @@ const Navbar = () => {
     >
       <div className="w-full px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2">
+          <button onClick={() => scrollToSection('root')} className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-brand flex items-center justify-center">
               <span className="text-white font-bold text-sm">JE</span>
             </div>
             <span className={cn("text-lg font-bold transition-colors", isScrolled ? "text-gray-900" : "text-white")}>
               JesElDev
             </span>
-          </Link>
+          </button>
 
           {/* Desktop */}
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
+              <button
+                key={link.sectionId}
+                onClick={() => scrollToSection(link.sectionId)}
                 className={cn(
                   "px-4 py-2 rounded-lg text-sm font-medium transition-all",
                   isScrolled
@@ -73,7 +81,7 @@ const Navbar = () => {
                 )}
               >
                 {link.label}
-              </Link>
+              </button>
             ))}
 
             <a
@@ -110,7 +118,7 @@ const Navbar = () => {
 
             <button
               onClick={() => scrollToSection('contact-info')}
-              className="ml-2 px-5 py-2 bg-brand text-white rounded-lg text-sm font-medium hover:bg-brand-dark transition-all shadow-sm shadow-brand/20 hover:shadow-brand/40"
+              className="ml-2 px-5 py-2 bg-brand text-white rounded-lg text-sm font-medium hover:bg-brand-dark transition-all shadow-sm shadow-brand/20"
             >
               {t('nav.contact')}
             </button>
@@ -137,14 +145,13 @@ const Navbar = () => {
           >
             <div className={cn("px-4 py-3 space-y-1 border-t", isScrolled ? "bg-white/95 backdrop-blur-xl border-gray-100" : "bg-mz-dark/95 backdrop-blur-xl border-white/10")}>
               {navLinks.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  className={cn("block px-4 py-2.5 rounded-lg text-sm font-medium", isScrolled ? "text-gray-700 hover:bg-gray-100" : "text-gray-200 hover:bg-white/10")}
-                  onClick={() => { setIsMenuOpen(false); window.scrollTo(0, 0); }}
+                <button
+                  key={link.sectionId}
+                  onClick={() => scrollToSection(link.sectionId)}
+                  className={cn("block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium", isScrolled ? "text-gray-700 hover:bg-gray-100" : "text-gray-200 hover:bg-white/10")}
                 >
                   {link.label}
-                </Link>
+                </button>
               ))}
               <a
                 href="/Jesus_Soto_VisualCV_Resume.pdf"
@@ -152,7 +159,7 @@ const Navbar = () => {
                 className={cn("block px-4 py-2.5 rounded-lg text-sm font-medium", isScrolled ? "text-gray-700 hover:bg-gray-100" : "text-gray-200 hover:bg-white/10")}
                 onClick={() => setIsMenuOpen(false)}
               >
-                {t('hero.downloadCV')}
+                CV
               </a>
               <button
                 onClick={() => scrollToSection('contact-info')}
