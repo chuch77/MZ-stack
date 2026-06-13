@@ -52,11 +52,11 @@ const Projects = () => {
     },
     {
       id: 5,
-      title: t('project.tech.title'),
-      brand: t('project.tech.brand'),
-      description: t('project.tech.desc'),
-      tags: ["Vue.js", "Laravel", "MySQL", "Redis"],
-      imageUrl: "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800&h=600&fit=crop",
+      title: 'BusinessFlow CRM',
+      brand: 'BusinessFlow',
+      description: 'El CRM que impulsa el crecimiento de tu negocio. Gestiona clientes, ventas, tareas y analítica desde un solo lugar. Toma mejores decisiones y haz crecer tu empresa.',
+      tags: ["React", "TailwindCSS", "Redux Toolkit", "Spring Boot"],
+      imageUrl: "/businessflow.png",
       link: "/links",
       accent: "from-blue-500 to-blue-600"
     }
