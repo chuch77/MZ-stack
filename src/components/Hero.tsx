@@ -80,7 +80,7 @@ const Hero = () => {
   const cards = [
     { icon: <Cpu className="w-5 h-5" />, title: "Frontend", desc: t('hero.frontend'), color: "from-blue-500/20 to-cyan-500/20" },
     { icon: <Code className="w-5 h-5" />, title: "Backend", desc: t('hero.backend'), color: "from-cyan-500/20 to-blue-600/20" },
-    { icon: <Layers className="w-5 h-5" />, title: "E-commerce", desc: t('hero.ecommerce'), color: "from-blue-600/20 to-sky-500/20" },
+    { icon: <Layers className="w-5 h-5" />, title: "Full Stack", desc: t('hero.ecommerce'), color: "from-blue-600/20 to-sky-500/20" },
   ];
 
   return (
