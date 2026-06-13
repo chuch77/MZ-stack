@@ -22,11 +22,11 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: t('project.gym.title'),
-      brand: t('project.gym.brand'),
-      description: t('project.gym.desc'),
-      tags: ["E-commerce", "React", "Express", "PayPal"],
-      imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+      title: 'Senderos del Sur',
+      brand: 'Senderos del Sur',
+      description: 'Plataforma web para explorar la Patagonia. Mapas y rutas detalladas, guías de senderos, funciona sin conexión y sincronización en todos los dispositivos.',
+      tags: ["React", "TailwindCSS", "Redux Toolkit", "Spring Boot"],
+      imageUrl: "/senderos-del-sur.png",
       link: "/links",
       accent: "from-cyan-500 to-blue-600"
     },
