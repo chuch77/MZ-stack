@@ -24,7 +24,7 @@ const Projects = () => {
       id: 2,
       title: 'Senderos del Sur',
       brand: 'Senderos del Sur',
-      description: 'Plataforma web para explorar la Patagonia. Mapas y rutas detalladas, guías de senderos, funciona sin conexión y sincronización en todos los dispositivos.',
+      description: 'Descubrí la Patagonia como nunca antes. Senderos, mapas interactivos, guías expertos y rutas detalladas en una sola plataforma. Tu aventura, siempre contigo.',
       tags: ["React", "TailwindCSS", "Redux Toolkit", "Spring Boot"],
       imageUrl: "/senderos-del-sur.png",
       link: "/links",
