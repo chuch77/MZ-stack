@@ -25,10 +25,10 @@ const ContactInfo = () => {
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-dark text-sm text-gray-400 mb-4">
             {t('nav.contact')}
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             {t('contact.title')}
           </h2>
-          <p className="text-gray-400 text-lg max-w-xl mx-auto">
+          <p className="text-gray-400 text-sm sm:text-base lg:text-lg max-w-xl mx-auto">
             {t('contact.subtitle')}
           </p>
         </motion.div>

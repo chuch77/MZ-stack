@@ -129,14 +129,14 @@ const Projects = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center"
           >
             {/* Image */}
-            <div className="relative group rounded-2xl overflow-hidden aspect-[4/3]">
+            <div className="relative group rounded-2xl overflow-hidden w-full" style={{aspectRatio: '16/10'}}>
               <img
                 src={project.imageUrl}
                 alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
               />
               <div className={`absolute inset-0 bg-gradient-to-t ${project.accent} opacity-40 mix-blend-multiply`} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -146,11 +146,11 @@ const Projects = () => {
             </div>
 
             {/* Info */}
-            <div className="space-y-5">
+            <div className="space-y-4 sm:space-y-5 px-1">
               <div>
                 <p className="text-brand text-sm font-semibold uppercase tracking-wider mb-2">{project.brand}</p>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">{project.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{project.description}</p>
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-3 leading-tight">{project.title}</h3>
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">{project.description}</p>
               </div>
 
               <div className="flex flex-wrap gap-2">

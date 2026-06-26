@@ -142,13 +142,13 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto items-start">
           {plans.map((plan, index) => (
             <Card 
               key={index} 
               className={`relative overflow-hidden transition-all duration-300 hover:shadow-lg ${
                 plan.popular 
-                  ? 'border-2 border-brand shadow-lg shadow-brand/10 scale-105' 
+                  ? 'border-2 border-brand shadow-lg shadow-brand/10 md:scale-105' 
                   : 'border border-gray-200 hover:border-brand/20'
               }`}
             >

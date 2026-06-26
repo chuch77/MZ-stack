@@ -179,9 +179,9 @@ const Hero = () => {
       </div>
 
       {/* Feature Cards */}
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 mx-auto -mt-16 md:-mt-20">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 mx-auto mt-8 md:-mt-20">
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-5xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
